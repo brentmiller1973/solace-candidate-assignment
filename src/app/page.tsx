@@ -24,15 +24,18 @@ export default function Home() {
     const newSearchTerm = e.target.value;
     setSearchTerm(newSearchTerm);
 
-    console.log("filtering advocates...", advocates);
     const filteredAdvocates = advocates.filter((advocate) => {
+      const searchLower = newSearchTerm.toLowerCase();
+      
       return (
-        advocate.firstName.includes(newSearchTerm) ||
-        advocate.lastName.includes(newSearchTerm) ||
-        advocate.city.includes(newSearchTerm) ||
-        advocate.degree.includes(newSearchTerm) ||
-        advocate.specialties.includes(newSearchTerm) ||
-        advocate.yearsOfExperience.toString().includes(newSearchTerm)
+        advocate.firstName?.toLowerCase().includes(searchLower) ||
+        advocate.lastName?.toLowerCase().includes(searchLower) ||
+        advocate.city?.toLowerCase().includes(searchLower) ||
+        advocate.degree?.toLowerCase().includes(searchLower) ||
+        advocate.specialties?.some(specialty => 
+          specialty?.toLowerCase().includes(searchLower)
+        ) ||
+        advocate.yearsOfExperience?.toString().includes(newSearchTerm)
       );
     });
 
