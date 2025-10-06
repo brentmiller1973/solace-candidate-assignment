@@ -49,7 +49,7 @@ export default function Home() {
   };
 
   return (
-    <main style={{ margin: "24px" }}>
+    <main className="m-6">
       <h1>Solace Advocates</h1>
       <br />
       <br />
@@ -60,7 +60,7 @@ export default function Home() {
         </p>
         {isClient && (
           <input 
-            style={{ border: "1px solid black" }} 
+            className="border border-black"
             value={searchTerm}
             onChange={onChange} 
           />
