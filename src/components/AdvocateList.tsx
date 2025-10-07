@@ -39,7 +39,7 @@ export const AdvocateList: React.FC<AdvocateListProps> = ({ advocates }) => {
           <tbody>
             {advocates.map((advocate, index) => (
               <tr
-                key={`${advocate.firstName}-${advocate.lastName}-${advocate.phoneNumber}`}
+                key={`advocate-${index}-${advocate.firstName}-${advocate.lastName}-${advocate.phoneNumber}`}
                 className={`border-b border-neutral-light-grey hover:bg-green-100/50 transition-colors duration-200 ${
                   index % 2 === 0 ? 'bg-neutral-white' : 'bg-green-100/20'
                 }`}
@@ -87,7 +87,7 @@ export const AdvocateList: React.FC<AdvocateListProps> = ({ advocates }) => {
                   <div className="flex flex-wrap gap-1 max-w-xs">
                     {advocate.specialties.slice(0, 3).map((specialty: string, sIndex: number) => (
                       <span
-                        key={`${advocate.firstName}-${advocate.lastName}-specialty-${sIndex}`}
+                        key={`advocate-${index}-specialty-${sIndex}`}
                         className="bg-opal text-primary-default px-2 py-1 rounded text-xs font-medium"
                       >
                         {specialty}
