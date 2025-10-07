@@ -194,7 +194,7 @@ export default function Home() {
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {filteredAdvocates.map((advocate, index) => (
                   <AdvocateCard
-                    key={`${advocate.firstName}-${advocate.lastName}-${advocate.phoneNumber}`}
+                    key={`advocate-card-${index}-${advocate.firstName}-${advocate.lastName}-${advocate.phoneNumber}`}
                     advocate={advocate}
                   />
                 ))}

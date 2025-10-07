@@ -63,7 +63,7 @@ export const AdvocateCard: React.FC<AdvocateCardProps> = ({ advocate }) => {
             <div className="flex flex-wrap gap-1">
               {advocate.specialties.map((specialty: string, sIndex: number) => (
                 <span
-                  key={`${advocate.firstName}-${advocate.lastName}-specialty-${sIndex}`}
+                  key={`${advocate.firstName}-${advocate.lastName}-${advocate.phoneNumber}-specialty-${sIndex}`}
                   className="bg-opal text-primary-default px-2 py-1 rounded text-xs font-medium"
                 >
                   {specialty}
