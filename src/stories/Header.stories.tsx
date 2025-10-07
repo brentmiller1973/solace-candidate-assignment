@@ -22,8 +22,8 @@ export const WithScrolledBackground: Story = {
         <Story />
         <div className="h-96 bg-gradient-hero p-8">
           <p className="text-neutral-dark-grey">
-            This content shows how the header looks when positioned above other content.
-            The header is sticky and will remain at the top when scrolling.
+            This content shows how the header looks when positioned above other content. The header
+            is sticky and will remain at the top when scrolling.
           </p>
         </div>
       </div>

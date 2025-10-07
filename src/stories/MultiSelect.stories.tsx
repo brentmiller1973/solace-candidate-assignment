@@ -74,7 +74,7 @@ export const WithPreselectedValues: Story = {
 export const Interactive: Story = {
   render: () => {
     const [selectedValues, setSelectedValues] = useState<string[]>(['Cardiology']);
-    
+
     return (
       <div className="w-80 space-y-4">
         <MultiSelect
@@ -85,7 +85,8 @@ export const Interactive: Story = {
           label="Medical Specialties"
         />
         <div className="text-sm text-neutral-dark-grey">
-          <strong>Selected:</strong> {selectedValues.length > 0 ? selectedValues.join(', ') : 'None'}
+          <strong>Selected:</strong>{' '}
+          {selectedValues.length > 0 ? selectedValues.join(', ') : 'None'}
         </div>
       </div>
     );

@@ -4,6 +4,7 @@
     "plugin:prettier/recommended",
     "plugin:storybook/recommended"
   ],
+  "ignorePatterns": ["src/stories/**/*"],
   "rules": {
     "prettier/prettier": "error",
     "no-restricted-syntax": [

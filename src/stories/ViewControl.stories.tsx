@@ -38,7 +38,7 @@ export const TableView: Story = {
 export const Interactive: Story = {
   render: () => {
     const [view, setView] = useState<'card' | 'table'>('card');
-    
+
     return (
       <div className="space-y-4">
         <ViewControl view={view} onViewChange={setView} />

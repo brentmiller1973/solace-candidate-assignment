@@ -76,13 +76,13 @@ export const FullApplication: Story = {
     return (
       <div className="min-h-screen bg-gradient-hero">
         <Header />
-        
+
         <main className="max-w-[1231px] mx-auto px-4 py-8">
           <Banner
             title="Find Your Advocate"
             subtitle="Connect with healthcare advocates who understand your needs and can guide you through your healthcare journey."
           />
-          
+
           <div className="space-y-8">
             <AdvocateSearch
               searchTerm={searchTerm}
@@ -92,19 +92,17 @@ export const FullApplication: Story = {
               isAdvancedSearchActive={isAdvancedSearchActive}
               resetRef={resetRef}
             />
-            
+
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-4">
                 <h2 className="font-heading text-2xl font-semibold text-primary">
                   Available Advocates
                 </h2>
-                <span className="text-neutral-dark-grey">
-                  ({sampleAdvocates.length} found)
-                </span>
+                <span className="text-neutral-dark-grey">({sampleAdvocates.length} found)</span>
               </div>
               <ViewControl view={view} onViewChange={setView} />
             </div>
-            
+
             {view === 'card' ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {sampleAdvocates.map((advocate, index) => (
@@ -124,7 +122,7 @@ export const FullApplication: Story = {
 export const ComponentShowcase: Story = {
   render: () => {
     const [selectedSpecialties, setSelectedSpecialties] = useState<string[]>(['Cardiology']);
-    
+
     return (
       <div className="max-w-4xl mx-auto p-8 space-y-12">
         <div>
@@ -132,7 +130,8 @@ export const ComponentShowcase: Story = {
             Component Showcase
           </h2>
           <p className="text-neutral-dark-grey mb-8">
-            A comprehensive overview of all components used in the Solace Healthcare Advocate application.
+            A comprehensive overview of all components used in the Solace Healthcare Advocate
+            application.
           </p>
         </div>
 
@@ -142,9 +141,15 @@ export const ComponentShowcase: Story = {
             <Button variant="primary">Primary Button</Button>
             <Button variant="secondary">Secondary Button</Button>
             <Button variant="link">Link Button</Button>
-            <Button variant="primary" size="sm">Small</Button>
-            <Button variant="primary" size="lg">Large</Button>
-            <Button variant="primary" disabled>Disabled</Button>
+            <Button variant="primary" size="sm">
+              Small
+            </Button>
+            <Button variant="primary" size="lg">
+              Large
+            </Button>
+            <Button variant="primary" disabled>
+              Disabled
+            </Button>
           </div>
         </section>
 
@@ -168,8 +173,9 @@ export const ComponentShowcase: Story = {
             <h2 className="font-heading text-3xl font-semibold text-primary">Heading 2</h2>
             <h3 className="font-heading text-2xl font-medium text-primary">Heading 3</h3>
             <p className="font-body text-base text-neutral-black leading-relaxed">
-              This is body text using the Inter font family. It demonstrates the default text styling 
-              used throughout the application with proper line height for optimal readability.
+              This is body text using the Inter font family. It demonstrates the default text
+              styling used throughout the application with proper line height for optimal
+              readability.
             </p>
           </div>
         </section>

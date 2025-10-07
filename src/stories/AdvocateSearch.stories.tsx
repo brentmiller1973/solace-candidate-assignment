@@ -86,8 +86,12 @@ export const Interactive: Story = {
         />
         <div className="mt-4 p-4 bg-neutral-light-grey rounded-lg">
           <h4 className="font-heading text-lg font-medium text-primary mb-2">Current State:</h4>
-          <p><strong>Search Term:</strong> {searchTerm || 'None'}</p>
-          <p><strong>Advanced Search Active:</strong> {isAdvancedSearchActive ? 'Yes' : 'No'}</p>
+          <p>
+            <strong>Search Term:</strong> {searchTerm || 'None'}
+          </p>
+          <p>
+            <strong>Advanced Search Active:</strong> {isAdvancedSearchActive ? 'Yes' : 'No'}
+          </p>
         </div>
       </div>
     );
