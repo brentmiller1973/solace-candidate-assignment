@@ -1,8 +1,12 @@
 name: Lint and Test
 
 on:
+  push:
+    branches:
+      - '**'        # run on every branch push
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   lint-and-test:
@@ -15,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22'   # or '22.20.0'
           cache: 'npm'
 
       - name: Install dependencies
