@@ -1,9 +1,41 @@
 @import 'tailwindcss';
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap');
+
 @theme {
+  /* Solace Brand Colors */
+  --color-primary-default: #1d4339;
+  --color-primary-focused: #285e50;
+  --color-primary-selected: #347866;
+  --color-accent-gold: #d7a13b;
+  --color-accent-gold-light: #e9cc95;
+  --color-accent-gold-dark: #d39009;
+  --color-opal: #d4e2dd;
+  --color-opal-mid: #d4e2dd4d;
+  --color-accent-mid: #3f937c;
+  --color-green-100: #f4f8f7;
+  --color-neutral-white: #fff;
+  --color-neutral-black: #101010;
+  --color-neutral-dark-grey: #5a5a5a;
+  --color-neutral-grey: #9a9a9a;
+  --color-neutral-light-grey: #e9e9e9;
+
+  /* Typography */
+  --font-family-heading: 'Crimson Text', serif;
+  --font-family-body: 'Inter', sans-serif;
+
+  /* Custom Gradients */
+  --background-image-gradient-primary: linear-gradient(45deg, #deb260, #d39009);
+  --background-image-gradient-primary-hover: linear-gradient(45deg, #3f937c, #d4e2dd4d 100%, #deb260);
+  --background-image-gradient-hero: linear-gradient(180deg, #d4e2dd4d, #d4e2dd 35%, white 58%);
   --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
   --background-image-gradient-conic: conic-gradient(
     from 180deg at 50% 50%,
     var(--tw-gradient-stops)
   );
+
+  /* Shadows */
+  --box-shadow-primary: 0 2px 17px 2px #afc8bf4d, inset 0 2px 4.7px #fff6;
+  --box-shadow-primary-hover: 3px 0 17px 2px #afc8bf4d, inset 0 3px 4.7px #fff6;
+  --box-shadow-card: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
 }

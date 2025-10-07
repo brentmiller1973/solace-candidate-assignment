@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Solace Candidate Assignment",
-  description: "Show us what you got",
+  title: "Solace Health - Find Your Patient Advocate",
+  description: "Connect with expert patient advocates who can help you navigate the healthcare system and solve any medical problem, covered by insurance.",
 };
 
 export default function RootLayout({
@@ -15,8 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className="font-body text-neutral-black min-h-screen antialiased">
+        {children}
+      </body>
     </html>
   );
 }
