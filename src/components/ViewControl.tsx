@@ -18,7 +18,12 @@ export const ViewControl: React.FC<ViewControlProps> = ({ view, onViewChange }) 
         aria-label="Card view"
       >
         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-7H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zM9 7v10m6-10v10" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 11H5m14-7H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zM9 7v10m6-10v10"
+          />
         </svg>
         Cards
       </button>
@@ -32,7 +37,12 @@ export const ViewControl: React.FC<ViewControlProps> = ({ view, onViewChange }) 
         aria-label="Table view"
       >
         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 6h18m-9 8h9M3 14h6m-6 4h6m4 0h9" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M3 10h18M3 6h18m-9 8h9M3 14h6m-6 4h6m4 0h9"
+          />
         </svg>
         Table
       </button>

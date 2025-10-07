@@ -26,7 +26,12 @@
 
   /* Custom Gradients */
   --background-image-gradient-primary: linear-gradient(45deg, #deb260, #d39009);
-  --background-image-gradient-primary-hover: linear-gradient(45deg, #3f937c, #d4e2dd4d 100%, #deb260);
+  --background-image-gradient-primary-hover: linear-gradient(
+    45deg,
+    #3f937c,
+    #d4e2dd4d 100%,
+    #deb260
+  );
   --background-image-gradient-hero: linear-gradient(180deg, #d4e2dd4d, #d4e2dd 35%, white 58%);
   --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
   --background-image-gradient-conic: conic-gradient(
