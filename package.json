@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "eslint --fix \"{app,src,components,lib,pages,utils}/**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"{app,src,components,lib,pages,utils}/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"{app,src,components,lib,pages,utils}/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "generate": "drizzle-kit generate",
     "migrate:up": "node ./src/db/migrate.js",
     "seed": "node --loader esbuild-register/loader -r esbuild-register ./src/db/seed/index.ts"
@@ -26,7 +29,10 @@
     "drizzle-kit": "^0.23.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "postcss": "^8.4.40",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.5.4"
   }

@@ -15,16 +15,16 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
   onSelectionChange,
   placeholder = 'Select options',
   label,
-  id
+  id,
 }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleToggleOption = (option: string) => {
     const newSelection = selectedValues.includes(option)
-      ? selectedValues.filter(item => item !== option)
+      ? selectedValues.filter((item) => item !== option)
       : [...selectedValues, option];
-    
+
     onSelectionChange(newSelection);
   };
 
@@ -57,11 +57,7 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
           {label}
         </label>
       )}
-      <div 
-        ref={dropdownRef}
-        className="relative"
-        onKeyDown={handleKeyDown}
-      >
+      <div ref={dropdownRef} className="relative" onKeyDown={handleKeyDown}>
         <button
           id={id}
           type="button"
@@ -69,21 +65,27 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
           className="w-full bg-neutral-white border border-neutral-dark-grey rounded-lg px-4 py-2 text-left focus:border-accent-gold-light focus:ring-2 focus:ring-accent-gold-light focus:ring-offset-2 focus:outline-none transition-all duration-200 flex justify-between items-center"
         >
           <span className="text-neutral-dark-grey">
-            {selectedValues.length > 0 
-              ? `${selectedValues.length} selected`
-              : placeholder}
+            {selectedValues.length > 0 ? `${selectedValues.length} selected` : placeholder}
           </span>
-          <svg className={`w-4 h-4 transition-transform duration-200 ${
-            showDropdown ? 'rotate-180' : ''
-          }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className={`w-4 h-4 transition-transform duration-200 ${
+              showDropdown ? 'rotate-180' : ''
+            }`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        
+
         {showDropdown && (
           <div className="absolute z-10 w-full mt-1 bg-neutral-white border border-neutral-dark-grey rounded-lg shadow-lg max-h-48 overflow-y-auto">
             {options.map((option) => (
-              <label key={option} className="flex items-center px-4 py-2 hover:bg-opal cursor-pointer">
+              <label
+                key={option}
+                className="flex items-center px-4 py-2 hover:bg-opal cursor-pointer"
+              >
                 <input
                   type="checkbox"
                   checked={selectedValues.includes(option)}
