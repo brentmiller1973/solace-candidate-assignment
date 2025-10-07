@@ -193,7 +193,6 @@ describe('ViewControl', () => {
 
   it('renders correct SVG paths for table icon', () => {
     const { container } = render(<ViewControl {...defaultProps} />);
-
     const tableButton = screen.getByText('Table').closest('button');
     const tableSvg = tableButton?.querySelector('svg');
     const tablePath = tableSvg?.querySelector('path');
