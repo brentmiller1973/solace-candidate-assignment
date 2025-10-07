@@ -1,5 +1,10 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "ignorePatterns": ["src/stories/**/*"],
   "rules": {
     "prettier/prettier": "error",
     "no-restricted-syntax": [
@@ -9,7 +14,15 @@
         "message": "Import React hooks directly from 'react' destructured import instead of using React.hookName"
       }
     ],
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
     "no-debugger": "error",
     "prefer-const": "error",
     "no-var": "error",

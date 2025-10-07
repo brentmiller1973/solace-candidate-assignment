@@ -30,3 +30,6 @@ yarn-debug.log*
 
 # Drizzle ORM
 drizzle/
+
+*storybook.log
+storybook-static
