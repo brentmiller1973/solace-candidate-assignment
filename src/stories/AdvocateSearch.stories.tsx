@@ -30,6 +30,7 @@ export const Default: Story = {
     searchTerm: '',
     onChange: () => {},
     onReset: () => {},
+    specialties: ['Cardiology', 'Neurology', 'Oncology', 'Pediatrics', 'Geriatrics', 'Mental Health'],
   },
 };
 
@@ -38,6 +39,7 @@ export const WithSearchTerm: Story = {
     searchTerm: 'Sarah Johnson',
     onChange: () => {},
     onReset: () => {},
+    specialties: ['Cardiology', 'Neurology', 'Oncology', 'Pediatrics', 'Geriatrics', 'Mental Health'],
   },
 };
 
@@ -48,6 +50,7 @@ export const AdvancedSearchActive: Story = {
     onChange: () => {},
     onReset: () => {},
     onAdvancedSearch: () => {},
+    specialties: ['Cardiology', 'Neurology', 'Oncology', 'Pediatrics', 'Geriatrics', 'Mental Health'],
   },
 };
 
@@ -83,6 +86,7 @@ export const Interactive: Story = {
           onAdvancedSearch={handleAdvancedSearch}
           isAdvancedSearchActive={isAdvancedSearchActive}
           resetRef={resetRef}
+          specialties={['Cardiology', 'Neurology', 'Oncology', 'Pediatrics', 'Geriatrics', 'Mental Health']}
         />
         <div className="mt-4 p-4 bg-neutral-light-grey rounded-lg">
           <h4 className="font-heading text-lg font-medium text-primary mb-2">Current State:</h4>
@@ -130,6 +134,7 @@ export const WithPrefilledAdvancedSearch: Story = {
           onAdvancedSearch={handleAdvancedSearch}
           isAdvancedSearchActive={isAdvancedSearchActive}
           resetRef={resetRef}
+          specialties={['Cardiology', 'Neurology', 'Oncology', 'Pediatrics', 'Geriatrics', 'Mental Health']}
         />
       </div>
     );
@@ -168,6 +173,7 @@ export const MobileView: Story = {
           onAdvancedSearch={handleAdvancedSearch}
           isAdvancedSearchActive={isAdvancedSearchActive}
           resetRef={resetRef}
+          specialties={['Cardiology', 'Neurology', 'Oncology', 'Pediatrics', 'Geriatrics', 'Mental Health']}
         />
       </div>
     );

@@ -22,6 +22,7 @@ type Story = StoryObj;
 
 const sampleAdvocates: Advocate[] = [
   {
+    id: 1,
     firstName: 'Sarah',
     lastName: 'Johnson',
     city: 'San Francisco, CA',
@@ -31,6 +32,7 @@ const sampleAdvocates: Advocate[] = [
     phoneNumber: 4155551234,
   },
   {
+    id: 2,
     firstName: 'Michael',
     lastName: 'Chen',
     city: 'Boston, MA',
@@ -40,6 +42,7 @@ const sampleAdvocates: Advocate[] = [
     phoneNumber: 6175551234,
   },
   {
+    id: 3,
     firstName: 'Dr. Emily',
     lastName: 'Rodriguez',
     city: 'Los Angeles, CA',
@@ -91,6 +94,7 @@ export const FullApplication: Story = {
               onAdvancedSearch={handleAdvancedSearch}
               isAdvancedSearchActive={isAdvancedSearchActive}
               resetRef={resetRef}
+              specialties={['Cardiology', 'Neurology', 'Oncology', 'Pediatrics', 'Geriatrics']}
             />
 
             <div className="flex justify-between items-center">

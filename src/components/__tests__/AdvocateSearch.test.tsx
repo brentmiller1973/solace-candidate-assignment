@@ -41,7 +41,6 @@ jest.mock('../MultiSelect', () => ({
     </div>
   ),
 }));
-
 describe('AdvocateSearch', () => {
   const defaultProps = {
     searchTerm: '',
@@ -49,12 +48,12 @@ describe('AdvocateSearch', () => {
     onReset: jest.fn(),
     onAdvancedSearch: jest.fn(),
     isAdvancedSearchActive: false,
+    specialties: ['Cardiology', 'Neurology', 'Oncology'],
   };
 
   beforeEach(() => {
     jest.clearAllMocks();
   });
-
   it('renders basic search input', () => {
     render(<AdvocateSearch {...defaultProps} />);
 
@@ -318,7 +317,7 @@ describe('AdvocateSearch', () => {
       const options = multiSelect.querySelectorAll('option');
 
       expect(options.length).toBeGreaterThan(0);
-      expect(options[0]).toHaveTextContent('Attention and Hyperactivity (ADHD)');
+      expect(options[0]).toHaveTextContent('Cardiology');
     });
   });
 
