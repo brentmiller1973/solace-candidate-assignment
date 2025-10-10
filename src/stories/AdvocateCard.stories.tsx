@@ -20,6 +20,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const sampleAdvocate: Advocate = {
+  id: 1,
   firstName: 'Sarah',
   lastName: 'Johnson',
   city: 'San Francisco, CA',
@@ -30,6 +31,7 @@ const sampleAdvocate: Advocate = {
 };
 
 const shortSpecialtiesAdvocate: Advocate = {
+  id: 2,
   firstName: 'Michael',
   lastName: 'Chen',
   city: 'Boston, MA',
@@ -40,6 +42,7 @@ const shortSpecialtiesAdvocate: Advocate = {
 };
 
 const manySpecialtiesAdvocate: Advocate = {
+  id: 3,
   firstName: 'Dr. Emily',
   lastName: 'Rodriguez',
   city: 'Los Angeles, CA',
@@ -57,6 +60,7 @@ const manySpecialtiesAdvocate: Advocate = {
 };
 
 const newAdvocate: Advocate = {
+  id: 4,
   firstName: 'James',
   lastName: 'Wilson',
   city: 'Austin, TX',
@@ -67,6 +71,7 @@ const newAdvocate: Advocate = {
 };
 
 const experiencedAdvocate: Advocate = {
+  id: 5,
   firstName: 'Dr. Margaret',
   lastName: 'Thompson',
   city: 'New York, NY',

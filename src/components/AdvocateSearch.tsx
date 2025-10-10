@@ -16,36 +16,8 @@ interface AdvocateSearchProps {
   onAdvancedSearch?: (criteria: AdvancedSearchCriteria) => void;
   isAdvancedSearchActive?: boolean;
   resetRef?: React.MutableRefObject<(() => void) | null>;
+  specialties: string[];
 }
-
-const SPECIALTIES = [
-  'Attention and Hyperactivity (ADHD)',
-  'Bipolar',
-  'Chronic pain',
-  'Coaching (leadership, career, academic and wellness)',
-  'Diabetic Diet and nutrition',
-  'Domestic abuse',
-  'Eating disorders',
-  'General Mental Health (anxiety, depression, stress, grief, life transitions)',
-  'Learning disorders',
-  'LGBTQ',
-  'Life coaching',
-  'Medication/Prescribing',
-  "Men's issues",
-  'Neuropsychological evaluations & testing (ADHD testing)',
-  'Obsessive-compulsive disorders',
-  'Pediatrics',
-  'Personal growth',
-  'Personality disorders',
-  'Relationship Issues (family, friends, couple, etc)',
-  'Schizophrenia and psychotic disorders',
-  'Sleep issues',
-  'Substance use/abuse',
-  'Suicide History/Attempts',
-  'Trauma & PTSD',
-  'Weight loss & nutrition',
-  "Women's issues (post-partum, infertility, family planning)",
-];
 
 export const AdvocateSearch: React.FC<AdvocateSearchProps> = ({
   searchTerm,
@@ -54,6 +26,7 @@ export const AdvocateSearch: React.FC<AdvocateSearchProps> = ({
   onAdvancedSearch,
   isAdvancedSearchActive = false,
   resetRef,
+  specialties,
 }) => {
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [advancedCriteria, setAdvancedCriteria] = useState<AdvancedSearchCriteria>({
@@ -106,7 +79,17 @@ export const AdvocateSearch: React.FC<AdvocateSearchProps> = ({
   }, [resetRef, handleFullReset]);
 
   return (
-    <div className="space-y-6">
+    <div className="bg-neutral-white/90 backdrop-blur-sm rounded-2xl shadow-card border-2 border-accent-gold-light p-8 space-y-6">
+      <div className="text-center mb-6">
+        <h2 className="font-heading text-2xl md:text-3xl font-normal text-primary-default mb-2">
+          Find Your Patient Advocate
+        </h2>
+        <p id="search-help" className="text-neutral-dark-grey text-lg">
+          Search by name, location, specialty, or experience to find the perfect advocate for your
+          needs.
+        </p>
+      </div>
+
       <div className="relative">
         <label htmlFor="advocate-search" className="sr-only">
           Search advocates by name, city, degree, specialty, or experience
@@ -194,7 +177,7 @@ export const AdvocateSearch: React.FC<AdvocateSearchProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <MultiSelect
-              options={SPECIALTIES}
+              options={specialties}
               selectedValues={advancedCriteria.specialties}
               onSelectionChange={handleSpecialtyChange}
               placeholder="Select specialties"

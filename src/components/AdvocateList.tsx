@@ -10,28 +10,53 @@ export const AdvocateList: React.FC<AdvocateListProps> = ({ advocates }) => {
   return (
     <div className="bg-neutral-white rounded-2xl shadow-card border border-opal overflow-hidden">
       <div className="max-h-[600px] overflow-y-auto overflow-x-auto">
-        <table className="w-full">
+        <table className="w-full" role="table" aria-label="Patient advocates directory">
+          <caption className="sr-only">
+            List of available patient advocates with their qualifications, contact information, and
+            specialties
+          </caption>
           <thead className="bg-green-100 border-b border-opal sticky top-0 z-10">
             <tr>
-              <th className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100">
+              <th
+                scope="col"
+                className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100"
+              >
                 Name
               </th>
-              <th className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100">
+              <th
+                scope="col"
+                className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100"
+              >
                 Degree
               </th>
-              <th className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100">
+              <th
+                scope="col"
+                className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100"
+              >
                 Location
               </th>
-              <th className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100">
+              <th
+                scope="col"
+                className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100"
+              >
                 Experience
               </th>
-              <th className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100">
+              <th
+                scope="col"
+                className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100"
+              >
                 Specialties
               </th>
-              <th className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100">
+              <th
+                scope="col"
+                className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100"
+              >
                 Contact
               </th>
-              <th className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100">
+              <th
+                scope="col"
+                className="text-left px-6 py-4 font-heading text-lg font-normal text-primary-default bg-green-100"
+              >
                 Action
               </th>
             </tr>
@@ -39,7 +64,7 @@ export const AdvocateList: React.FC<AdvocateListProps> = ({ advocates }) => {
           <tbody>
             {advocates.map((advocate, index) => (
               <tr
-                key={`advocate-${index}-${advocate.firstName}-${advocate.lastName}-${advocate.phoneNumber}`}
+                key={advocate.id}
                 className={`border-b border-neutral-light-grey hover:bg-green-100/50 transition-colors duration-200 ${
                   index % 2 === 0 ? 'bg-neutral-white' : 'bg-green-100/20'
                 }`}
@@ -87,7 +112,7 @@ export const AdvocateList: React.FC<AdvocateListProps> = ({ advocates }) => {
                   <div className="flex flex-wrap gap-1 max-w-xs">
                     {advocate.specialties.slice(0, 3).map((specialty: string, sIndex: number) => (
                       <span
-                        key={`advocate-${index}-specialty-${sIndex}`}
+                        key={`${advocate.id}-specialty-${sIndex}`}
                         className="bg-opal text-primary-default px-2 py-1 rounded text-xs font-medium"
                       >
                         {specialty}
@@ -104,6 +129,7 @@ export const AdvocateList: React.FC<AdvocateListProps> = ({ advocates }) => {
                   <a
                     href={`tel:${advocate.phoneNumber}`}
                     className="flex items-center text-primary-default hover:text-primary-focused transition-colors duration-200 font-medium"
+                    aria-label={`Call ${advocate.firstName} ${advocate.lastName} at ${advocate.phoneNumber}`}
                   >
                     <svg
                       className="w-4 h-4 mr-2"
@@ -122,7 +148,11 @@ export const AdvocateList: React.FC<AdvocateListProps> = ({ advocates }) => {
                   </a>
                 </td>
                 <td className="px-6 py-4">
-                  <Button variant="primary" size="sm">
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    aria-label={`Connect with ${advocate.firstName} ${advocate.lastName}`}
+                  >
                     Connect
                   </Button>
                 </td>

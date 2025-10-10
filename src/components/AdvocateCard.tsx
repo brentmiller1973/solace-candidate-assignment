@@ -63,7 +63,7 @@ export const AdvocateCard: React.FC<AdvocateCardProps> = ({ advocate }) => {
             <div className="flex flex-wrap gap-1">
               {advocate.specialties.map((specialty: string, sIndex: number) => (
                 <span
-                  key={`${advocate.firstName}-${advocate.lastName}-${advocate.phoneNumber}-specialty-${sIndex}`}
+                  key={`${advocate.id}-specialty-${sIndex}`}
                   className="bg-opal text-primary-default px-2 py-1 rounded text-xs font-medium"
                 >
                   {specialty}
@@ -78,8 +78,15 @@ export const AdvocateCard: React.FC<AdvocateCardProps> = ({ advocate }) => {
         <a
           href={`tel:${advocate.phoneNumber}`}
           className="flex items-center text-primary-default hover:text-primary-focused transition-colors duration-200 font-medium"
+          aria-label={`Call ${advocate.firstName} ${advocate.lastName} at ${advocate.phoneNumber}`}
         >
-          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="w-4 h-4 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -89,7 +96,11 @@ export const AdvocateCard: React.FC<AdvocateCardProps> = ({ advocate }) => {
           </svg>
           {advocate.phoneNumber}
         </a>
-        <Button variant="primary" size="sm">
+        <Button
+          variant="primary"
+          size="sm"
+          aria-label={`Connect with ${advocate.firstName} ${advocate.lastName}`}
+        >
           Connect
         </Button>
       </div>

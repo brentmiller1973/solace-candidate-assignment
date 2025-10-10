@@ -14,6 +14,7 @@ jest.mock('../Button', () => ({
 describe('AdvocateList', () => {
   const mockAdvocates: Advocate[] = [
     {
+      id: 1,
       firstName: 'John',
       lastName: 'Doe',
       city: 'New York',
@@ -23,6 +24,7 @@ describe('AdvocateList', () => {
       phoneNumber: 5551234567,
     },
     {
+      id: 2,
       firstName: 'Jane',
       lastName: 'Smith',
       city: 'Los Angeles',

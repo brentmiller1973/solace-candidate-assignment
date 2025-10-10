@@ -14,6 +14,7 @@ jest.mock('../Button', () => ({
 
 describe('AdvocateCard', () => {
   const mockAdvocate: Advocate = {
+    id: 1,
     firstName: 'John',
     lastName: 'Doe',
     city: 'New York',

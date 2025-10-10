@@ -21,6 +21,7 @@ type Story = StoryObj<typeof meta>;
 
 const sampleAdvocates: Advocate[] = [
   {
+    id: 1,
     firstName: 'Sarah',
     lastName: 'Johnson',
     city: 'San Francisco, CA',
@@ -30,6 +31,7 @@ const sampleAdvocates: Advocate[] = [
     phoneNumber: 4155551234,
   },
   {
+    id: 2,
     firstName: 'Michael',
     lastName: 'Chen',
     city: 'Boston, MA',
@@ -39,6 +41,7 @@ const sampleAdvocates: Advocate[] = [
     phoneNumber: 6175551234,
   },
   {
+    id: 3,
     firstName: 'Dr. Emily',
     lastName: 'Rodriguez',
     city: 'Los Angeles, CA',
@@ -48,6 +51,7 @@ const sampleAdvocates: Advocate[] = [
     phoneNumber: 3235551234,
   },
   {
+    id: 4,
     firstName: 'James',
     lastName: 'Wilson',
     city: 'Austin, TX',
@@ -57,6 +61,7 @@ const sampleAdvocates: Advocate[] = [
     phoneNumber: 5125551234,
   },
   {
+    id: 5,
     firstName: 'Dr. Margaret',
     lastName: 'Thompson',
     city: 'New York, NY',
@@ -69,6 +74,7 @@ const sampleAdvocates: Advocate[] = [
 
 const singleAdvocate: Advocate[] = [
   {
+    id: 1,
     firstName: 'Sarah',
     lastName: 'Johnson',
     city: 'San Francisco, CA',
@@ -82,6 +88,7 @@ const singleAdvocate: Advocate[] = [
 const manyAdvocates: Advocate[] = [
   ...sampleAdvocates,
   {
+    id: 6,
     firstName: 'David',
     lastName: 'Kim',
     city: 'Seattle, WA',
@@ -91,6 +98,7 @@ const manyAdvocates: Advocate[] = [
     phoneNumber: 2065551234,
   },
   {
+    id: 7,
     firstName: 'Lisa',
     lastName: 'Anderson',
     city: 'Chicago, IL',
@@ -100,6 +108,7 @@ const manyAdvocates: Advocate[] = [
     phoneNumber: 3125551234,
   },
   {
+    id: 8,
     firstName: 'Robert',
     lastName: 'Garcia',
     city: 'Miami, FL',
@@ -109,6 +118,7 @@ const manyAdvocates: Advocate[] = [
     phoneNumber: 3055551234,
   },
   {
+    id: 9,
     firstName: 'Jennifer',
     lastName: 'Brown',
     city: 'Denver, CO',
@@ -118,6 +128,7 @@ const manyAdvocates: Advocate[] = [
     phoneNumber: 3035551234,
   },
   {
+    id: 10,
     firstName: 'Thomas',
     lastName: 'Lee',
     city: 'Portland, OR',
