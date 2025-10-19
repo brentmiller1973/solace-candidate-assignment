@@ -131,6 +131,7 @@ export default function AdvocateSearchPage({ specialties }: AdvocateSearchPagePr
         });
       }
       if (searchCriteria.experienceLevel !== '' && searchCriteria.experienceLevel > 0) {
+        params.append('experience', searchCriteria.experienceLevel.toString());
       }
     }
     return params;
